@@ -14,7 +14,7 @@ def fibonacci(n):
 
 @app.route('/fibonacci',methods=['GET','POST'])
 def collectData():
-    n=int(request.args.get('n'))
+    n=int(request.args.get())
     
     result=fibonacci(n)
     return(json.dumps(result))
